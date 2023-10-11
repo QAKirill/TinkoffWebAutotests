@@ -3,10 +3,10 @@
 
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
 - [Запуск автотестов](#arrow_forward-запуск-автотестов)
-- [Сборка в Jenkins](#сборка-в-jenkins)
-- [Пример Allure-отчета](#пример-allure-отчета)
-- [Уведомления в Telegram с использованием бота](#уведомления-в-telegram-с-использованием-бота)
-- [Видео примера запуска тестов в Selenoid](#-видео-примера-запуска-теста-в-selenoid)
+- [Сборка в Jenkins](#Сборка-в-Jenkins)
+- [Пример Allure-отчета](#Пример-Allure-отчета)
+- [Уведомления в Telegram с использованием бота](#Уведомления-в-Telegram-с-использованием-бота)
+- [Видео примера запуска тестов в Selenoid](#Видео-запуска-тестов-в-Selenoid)
 
 ## :computer: Использованный стек технологий
 
@@ -60,6 +60,10 @@ remote_test
 -DbrowserSize=${BROWSER_SIZE}
 -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub
 ```
+## <img src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+<p align="center">
+<img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
+</p>
 
 ### Параметры сборки
 
@@ -67,11 +71,6 @@ remote_test
 * <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты. По-умолчанию - <code>100.0</code>.
 * <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты. По-умолчанию - <code>1920x1080</code>.
 * <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
-
-## <img src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
-<p align="center">
-<img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
-</p>
 
 ## <img src="attach/Logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
 ### Overview
@@ -104,7 +103,7 @@ remote_test
 <img width="70%" title="Telegram Notifications" src="attach/Reports/notification.jpg">
 </p>
 
-## Видео примера запуска тестов в Selenoid
+## Видео запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.  
 <a href="attach/Reports/video.mp4">video.mp4</a> (скачайте, чтобы посмотреть)
