@@ -14,7 +14,7 @@
 <img width="6%" title="IntelliJ IDEA" src="attach/Logo/Intelij_IDEA.svg">
 <img width="6%" title="Java" src="attach/Logo/Java.svg">
 <img width="6%" title="Selenide" src="attach/Logo/Selenide.svg">
-<img width="6%" title="Selenoid" src="attach/logo/Selenoid.svg">
+<img width="6%" title="Selenoid" src="attach/Logo/Selenoid.svg">
 <img width="6%" title="Allure Report" src="attach/Logo/Allure_Report.svg">
 <img width="5%" title="Allure TestOps" src="attach/Logo/AllureTestOps.svg">
 <img width="6%" title="Gradle" src="attach/Logo/Gradle.svg">
