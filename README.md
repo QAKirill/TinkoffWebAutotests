@@ -106,7 +106,5 @@ remote_test
 
 ## Видео примера запуска тестов в Selenoid
 
-К каждому тесту в отчете прилагается видео прогона.
-<p align="center">
-  <img title="Selenoid Video" src="attach/Reports/video.mp4">
-</p>
+К каждому тесту в отчете прилагается видео прогона.  
+<a href="attach/Reports/video.mp4">video.mp4</a>
