@@ -11,17 +11,17 @@
 ## :computer: Использованный стек технологий
 
 <p align="center">
-<img width="6%" title="IntelliJ IDEA" src="attach/logo/Intelij_IDEA.svg">
-<img width="6%" title="Java" src="attach/logo/Java.svg">
-<img width="6%" title="Selenide" src="attach/logo/Selenide.svg">
+<img width="6%" title="IntelliJ IDEA" src="attach/Logo/Intelij_IDEA.svg">
+<img width="6%" title="Java" src="attach/Logo/Java.svg">
+<img width="6%" title="Selenide" src="attach/Logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="attach/logo/Selenoid.svg">
-<img width="6%" title="Allure Report" src="attach/logo/Allure_Report.svg">
-<img width="5%" title="Allure TestOps" src="attach/logo/AllureTestOps.svg">
-<img width="6%" title="Gradle" src="attach/logo/Gradle.svg">
-<img width="6%" title="JUnit5" src="attach/logo/JUnit5.svg">
-<img width="6%" title="GitHub" src="attach/logo/GitHub.svg">
-<img width="6%" title="Jenkins" src="attach/logo/Jenkins.svg">
-<img width="6%" title="Telegram" src="attach/logo/Telegram.svg">
+<img width="6%" title="Allure Report" src="attach/Logo/Allure_Report.svg">
+<img width="5%" title="Allure TestOps" src="attach/Logo/AllureTestOps.svg">
+<img width="6%" title="Gradle" src="attach/Logo/Gradle.svg">
+<img width="6%" title="JUnit5" src="attach/Logo/JUnit5.svg">
+<img width="6%" title="GitHub" src="attach/Logo/GitHub.svg">
+<img width="6%" title="Jenkins" src="attach/Logo/Jenkins.svg">
+<img width="6%" title="Telegram" src="attach/Logo/Telegram.svg">
 </p>
 
 - В данном проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования Selenide. 
@@ -70,20 +70,20 @@ remote_test
 
 ## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
 <p align="center">
-<img title="Jenkins Build" src="attach/screens/JenkinsBuild.png">
+<img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
 </p>
 
 ## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
 ### Overview
 
 <p align="center">
-<img title="Allure Overview" src="attach/screens/allureReport.png">
+<img title="Allure Overview" src="attach/Reports/allureReport.png">
 </p>
 
 ### Результат выполнения теста
 
 <p align="center">
-<img title="Test Results in Alure" src="attach/screens/ResultTest.png">
+<img title="Test Results in Alure" src="attach/Reports/ResultTest.png">
 </p>
 
 ## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
@@ -93,7 +93,7 @@ remote_test
 На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="attach/screens/allureAutotestCloud.png">
+<img title="Allure TestOps DashBoard" src="attach/Reports/allureAutotestCloud.png">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
@@ -101,12 +101,12 @@ remote_test
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="attach/screens/notification.png">
+<img width="70%" title="Telegram Notifications" src="attach/Reportss/notification.png">
 </p>
 
 ## Видео примера запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.
 <p align="center">
-  <img title="Selenoid Video" src="attach/screens/video.mp4">
+  <img title="Selenoid Video" src="attach/Reports/video.mp4">
 </p>
