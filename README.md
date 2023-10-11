@@ -68,12 +68,12 @@ remote_test
 * <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты. По-умолчанию - <code>1920x1080</code>.
 * <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
-## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+## <img src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
 <p align="center">
 <img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
 </p>
 
-## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
+## <img src="attach/Logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
 ### Overview
 
 <p align="center">
@@ -86,7 +86,7 @@ remote_test
 <img title="Test Results in Alure" src="attach/Reports/ResultTest.png">
 </p>
 
-## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
+## <img src="attach/Logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
@@ -96,7 +96,7 @@ remote_test
 <img title="Allure TestOps DashBoard" src="attach/Reports/allureAutotestCloud.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="attach/Logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
