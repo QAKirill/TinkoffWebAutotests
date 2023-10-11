@@ -93,7 +93,7 @@ remote_test
 На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="attach/Reports/allureAutotestCloud.png">
+<img title="Allure TestOps DashBoard" src="attach/Reports/ResultTest.png">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="attach/Logo/Telegram.svg"> Уведомления в Telegram с использованием бота
@@ -101,7 +101,7 @@ remote_test
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="attach/Reportss/notification.png">
+<img width="70%" title="Telegram Notifications" src="attach/Reports/notification.jpg">
 </p>
 
 ## Видео примера запуска тестов в Selenoid
