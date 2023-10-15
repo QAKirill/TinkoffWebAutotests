@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class DebitCardsPage {
 
-    SelenideElement
+    private SelenideElement
             menuBar = $("[role=menubar]"),
             banner = $("[role=banner]"),
             headerChooseCardType = $("#form").$(byText("Выберите вид карты")),

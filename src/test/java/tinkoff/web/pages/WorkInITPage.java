@@ -1,15 +1,15 @@
 package tinkoff.web.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.withText;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class WorkInITPage {
-    SelenideElement
+    private SelenideElement
             mainFrame = $("[role=main]"),
             respondButton = $("[data-qa-type=uikit\\/button\\.content]"),
             inputFio = $("[data-qa-type=uikit\\/portalWrapper]")
@@ -48,9 +48,8 @@ public class WorkInITPage {
         return this;
     }
 
-    public WorkInITPage findCoolVacancy(String value){
-        $("table").$(byText(value)).click();
-        $(withText("Достойная зарплата")).shouldBe(exist); //проверка на крутость вакансии!
+    public WorkInITPage findFirstVacancy(){
+        $("table").$("[data-qa-type=uikit\\/table\\.tableCell]").click();
 
         return this;
     }

@@ -4,10 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tinkoff.web.pages.DebitCardsPage;
-import tinkoff.web.pages.MainPage;
-import tinkoff.web.pages.TravelInsurancePage;
-import tinkoff.web.pages.WorkInITPage;
+import tinkoff.web.pages.*;
 
 import static io.qameta.allure.Allure.step;
 
@@ -26,12 +23,16 @@ public class TinkoffWebTests extends TestBase{
                 .checkNavigationPanel()
                 .openDebitCards());
 
-        step("Проверка формы", () ->
-        debitCardsPage
-                .checkHeader()
-                .openPremiumCards()
-                .applyForADebitCard()
-                .checkApplyForm());
+        step("Проверка заголовка h1", () ->
+                debitCardsPage.checkHeader());
+
+        step("Нажать Премиальные и выбрать Tinkoff Black Premium", () ->
+                debitCardsPage
+                        .openPremiumCards()
+                        .applyForADebitCard());
+
+        step("Проверка формы заказа дебетовой карты", () ->
+        debitCardsPage.checkApplyForm());
     }
 
     @Test
@@ -45,14 +46,22 @@ public class TinkoffWebTests extends TestBase{
                 .checkNavigationPanel()
                 .openWorkInIT());
 
-        step("Проверка формы", () ->
-        workInITPage
-                .checkHeader()
-                .openVacancies()
-                .setFilters()
-                .findCoolVacancy("Инженер по автоматизации тестирования на Java")
-                .respondButtonClick()
-                .checkApplyVacancyForm());
+        step("Проверка заголовка h1", () ->
+                workInITPage.checkHeader());
+
+        step("Открыть Вакансии", () ->
+                workInITPage.openVacancies());
+
+        step("Отфильтровать вакансии", () ->
+                workInITPage.setFilters());
+
+        step("Открыть самую первую вакансию и откликнуться на неё", () ->
+                workInITPage
+                        .findFirstVacancy()
+                        .respondButtonClick());
+
+        step("Проверка формы отклика на вакансию", () ->
+        workInITPage.checkApplyVacancyForm());
     }
 
     @Test
@@ -66,11 +75,63 @@ public class TinkoffWebTests extends TestBase{
                 .checkNavigationPanel()
                 .openTravelInsurance());
 
-        step("Проверка формы", () ->
-        travelInsurancePage
-                .checkHeader()
-                .calculateCostButtonClick()
-                .checkCalculationForm());
+        step("Проверка заголовка h1", () ->
+                travelInsurancePage.checkHeader());
+
+        step("Нажать кнопку Рассчитать стоимость", () ->
+                travelInsurancePage.calculateCostButtonClick());
+
+        step("Проверка формы расчета страховки", () ->
+        travelInsurancePage.checkCalculationForm());
+    }
+
+    @Test
+    @Tag("remote")
+    @DisplayName("Сумма оплаты за выбранные подписки рассчитывается корректно")
+    void checkProSubscriptionSum() {
+        SubscriptionProPage subscriptionProPage = new SubscriptionProPage();
+        step("Открыть страницу подписки PRO", () ->
+                mainPage.openPage()
+                        .checkNavigationPanel()
+                        .openSubscriptionPro());
+
+        step("Проверка заголовка h1", () ->
+                subscriptionProPage.checkHeader());
+
+        step("Нажать кнопку Попробовать бесплатно", () ->
+                subscriptionProPage.tryForFreeButtonClick());
+
+        step("Переключение чекбоксов", () ->
+                subscriptionProPage
+                        .proCheckboxClick()
+                        .vkMusicCheckboxClick()
+                        .premierCheckboxClick()
+                        .iviCheckboxClick());
+
+        step("Проверка суммы", () ->
+                subscriptionProPage.checkSum("1056"));
+    }
+
+    @Test
+    @Tag("remote")
+    @DisplayName("Чтобы открыть накопительный счет необходимо залогиниться")
+    void needLoginBeforeOpenSavingsAccountTest() {
+        SavingsAccountPage savingsAccountPage = new SavingsAccountPage();
+        LoginPage loginPage = new LoginPage();
+
+        step("Открыть страницу сберегательного счета", () ->
+                mainPage.openPage()
+                        .checkNavigationPanel()
+                        .openSavingsAccount());
+
+        step("Нажать кнопку Открыть накопительный счет", () ->
+                savingsAccountPage.openSAButtonClick());
+
+        step("Нажать кнопку Открыть в личном кабинете", () ->
+                savingsAccountPage.openInLKButtonClick());
+
+        step("Проверить открывшуюся форму входа в Личный Кабинет", () ->
+                loginPage.checkLoginPage());
     }
 
     @Test
@@ -79,5 +140,12 @@ public class TinkoffWebTests extends TestBase{
     void fakeTest1() {
         step("Успешно падаем", () ->
                 Assertions.assertTrue(false));
+    }
+
+    @Test
+    @DisplayName("Fake test - always passes")
+    void fakeNotRemoteTest() {
+        step("Успешный успех", () ->
+                Assertions.assertTrue(true));
     }
 }

@@ -10,11 +10,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
 
-    SelenideElement
+    private SelenideElement
             navigationPanel = $("[data-test=navigation]"),
             debitCards = $("[data-test$=text-item-0-1]"),
             workInIT = $("[data-test=menu-item-3]"),
-            insurancePage = $("[data-test$=text-item-3-2]");
+            insurancePage = $("[data-test$=text-item-3-2]"),
+            subscriptionPro = $("[data-test$=text-item-0-6]"),
+            savingsAccount = $("[data-test$=text-item-0-5]");
 
     public MainPage openPage() {
         open("/");
@@ -57,4 +59,19 @@ public class MainPage {
 
         return this;
     }
+
+    public MainPage openSubscriptionPro(){
+        navigationPanel.$("[data-test=menu-item-0]").hover();
+        subscriptionPro.click();
+
+        return this;
+    }
+
+    public MainPage openSavingsAccount(){
+        navigationPanel.$("[data-test=menu-item-0]").hover();
+        savingsAccount.click();
+
+        return this;
+    }
+
 }

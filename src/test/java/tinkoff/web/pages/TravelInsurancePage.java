@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class TravelInsurancePage {
-    SelenideElement
+    private SelenideElement
             mainFrame = $("[role=main]"),
             calculateCost = $("[role=main]").$("[type=button]"),
             countrySelect = $("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.form]").$("[role=listbox]"),
