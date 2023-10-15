@@ -2,11 +2,11 @@
 ## :pushpin: Содержание:
 
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
-- [Запуск тестов из терминала](#arrow_forward-запуск-тестов-из-терминала)
-- [Сборка в Jenkins](#сборка-в-jenkins)
-- [Пример Allure-отчета](#пример-allure-отчета)
-- [Уведомления в Telegram с использованием бота](#уведомления-в-telegram-с-использованием-бота)
-- [Видео примера запуска тестов в Selenoid](#-видео-примера-запуска-теста-в-selenoid)
+- [Запуск автотестов](#arrow_forward-запуск-автотестов)
+- [Сборка в Jenkins](#jenkins)
+- [Пример Allure-отчета](#allure)
+- [Уведомления в Telegram с использованием бота](#telega)
+- [Видео примера запуска тестов в Selenoid](#Видео-запуска-тестов-в-Selenoid)
 
 ## :computer: Использованный стек технологий
 
@@ -29,7 +29,7 @@
 - Использованы фреймворки <code>JUnit 5</code> и [Selenide](https://selenide.org/).
 - При прогоне тестов браузер запускается в [Selenoid](https://aerokube.com/selenoid/).
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота. 
-- Осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>
+- Осуществлена интеграция с <code>Allure TestOps</code>
 
 Содержание Allure-отчета:
 * Шаги теста;
@@ -42,15 +42,15 @@
 
 ### Запуск тестов из терминала
 ```
-gradle clean main_test
+gradle clean test
 ```
-При выполнении команды, данные тесты запустятся удаленно в <code>Selenoid</code>.
-
 ### Запуск тестов на удаленном браузере
 ```
-gradle clean clean remote_test
+gradle clean remote_test
 ```
-При необходимости также можно переопределить параметры запуска
+При выполнении команды, тесты запустятся удаленно в <code>Selenoid</code>.
+
+Также можно переопределить параметры запуска:
 
 ```
 clean
@@ -60,6 +60,10 @@ remote_test
 -DbrowserSize=${BROWSER_SIZE}
 -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub
 ```
+## <img name="jenkins" src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+<p align="center">
+<img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
+</p>
 
 ### Параметры сборки
 
@@ -68,12 +72,7 @@ remote_test
 * <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты. По-умолчанию - <code>1920x1080</code>.
 * <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
-## <img src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
-<p align="center">
-<img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
-</p>
-
-## <img src="attach/Logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
+## <img name="allure" src="attach/Logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
 ### Overview
 
 <p align="center">
@@ -96,17 +95,15 @@ remote_test
 <img title="Allure TestOps DashBoard" src="attach/Reports/allureAutotestCloud.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="attach/Logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+## <img name="telega" width="4%" style="vertical-align:middle" title="Telegram" src="attach/Logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="attach/Reportss/notification.png">
+<img width="70%" title="Telegram Notifications" src="attach/Reports/notification.jpg">
 </p>
 
-## Видео примера запуска тестов в Selenoid
+## Видео запуска тестов в Selenoid
 
-К каждому тесту в отчете прилагается видео прогона.
-<p align="center">
-  <img title="Selenoid Video" src="attach/Reports/video.mp4">
-</p>
+К каждому тесту в отчете прилагается видео прогона.  
+<a href="attach/Reports/video.mp4">video.mp4</a> (скачайте, чтобы посмотреть)
