@@ -110,4 +110,6 @@ https://allure.autotests.cloud/launch/30934
 ## Видео запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.  
-<a href="attach/Reports/video.gif">video.gif</a>
+<p align="center">
+<img title="Selenoid Video" src="attach/Reports/video.gif" width="550" height="350"  alt="video">   
+</p>
