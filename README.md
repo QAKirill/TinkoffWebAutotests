@@ -61,6 +61,7 @@ remote_test
 -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub
 ```
 ## <img name="jenkins" src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/
 <p align="center">
 <img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
 </p>
@@ -73,6 +74,8 @@ remote_test
 * <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
 ## <img name="allure" src="attach/Logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
+https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/3/allure/
+
 ### Overview
 
 <p align="center">
@@ -86,6 +89,7 @@ remote_test
 </p>
 
 ## <img src="attach/Logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
+https://allure.autotests.cloud/launch/30934
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
@@ -106,4 +110,4 @@ remote_test
 ## Видео запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.  
-<a href="attach/Reports/video.mp4">video.mp4</a> (скачайте, чтобы посмотреть)
+<a href="attach/Reports/video.gif">video.gif</a>
