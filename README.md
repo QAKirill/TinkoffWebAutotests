@@ -60,8 +60,8 @@ remote_test
 -DbrowserSize=${BROWSER_SIZE}
 -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub
 ```
-## <img name="jenkins" src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
-https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/
+## <img name="jenkins" src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> <a href="https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/" target="_blank"> Сборка в Jenkins</a>
+
 <p align="center">
 <img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
 </p>
