@@ -60,7 +60,7 @@ remote_test
 -DbrowserSize=${BROWSER_SIZE}
 -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub
 ```
-## <img name="jenkins" src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> <a href="https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/" target="_blank"> Сборка в Jenkins</a>
+## <img name="jenkins" src="attach/Logo/Jenkins.svg" title="Jenkins" width="4%"/> <a href="https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests" target="blank">Сборка в Jenkins</a>
 
 <p align="center">
 <img title="Jenkins Build" src="attach/Reports/JenkinsBuild.png">
@@ -73,8 +73,7 @@ remote_test
 * <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты. По-умолчанию - <code>1920x1080</code>.
 * <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
-## <img name="allure" src="attach/Logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
-https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/3/allure/
+## <img name="allure" src="attach/Logo/Allure_Report.svg" title="Allure Report" width="4%"/> <a href="https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/3/allure" target="_blank">Пример Allure-отчета</a>
 
 ### Overview
 
@@ -88,8 +87,7 @@ https://jenkins.autotests.cloud/job/21-Yejik-java-TinkoffWebTests/3/allure/
 <img title="Test Results in Alure" src="attach/Reports/ResultTest.png">
 </p>
 
-## <img src="attach/Logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
-https://allure.autotests.cloud/launch/30934
+## <img src="attach/Logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> <a href="https://allure.autotests.cloud/launch/30934" target="_blank">Интеграция с Allure TestOps</a>
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
