@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tinkoff.web.pages.*;
 
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class TinkoffWebTests extends TestBase{
@@ -88,18 +89,19 @@ public class TinkoffWebTests extends TestBase{
     @Test
     @Tag("remote")
     @DisplayName("Сумма оплаты за выбранные подписки рассчитывается корректно")
-    void checkProSubscriptionSum() {
+    void checkProSubscriptionSum() throws InterruptedException {
         SubscriptionProPage subscriptionProPage = new SubscriptionProPage();
         step("Открыть страницу подписки PRO", () ->
-                mainPage.openPage()
-                        .checkNavigationPanel()
-                        .openSubscriptionPro());
+                open("/pro"));
 
         step("Проверка заголовка h1", () ->
                 subscriptionProPage.checkHeader());
 
-        step("Нажать кнопку Попробовать бесплатно", () ->
-                subscriptionProPage.tryForFreeButtonClick());
+        step("Нажать кнопку Попробовать бесплатно", () -> {
+            subscriptionProPage.tryForFreeButtonClick();
+
+                }
+        );
 
         step("Переключение чекбоксов", () ->
                 subscriptionProPage

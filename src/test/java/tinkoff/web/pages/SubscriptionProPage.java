@@ -10,16 +10,17 @@ public class SubscriptionProPage {
     private SelenideElement
             mainFrame = $("[role=main]"),
             tryForFreeButton = $("[role=main]").$("[type=button]"),
-            proCheckbox =$("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.content]")
+            proCheckbox = $("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.form]")
                     .$("[value=pro]"),
-            vkMusicCheckbox =$("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.content]")
+            vkMusicCheckbox = $("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.form]")
                     .$("[value=vk_music]"),
-            premierCheckbox =$("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.content]")
+            premierCheckbox = $("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.form]")
                     .$("[value=premier]"),
-            iviCheckbox =$("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.content]")
+            iviCheckbox = $("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.form]")
                     .$("[value=ivi]"),
-            sumField =$("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.content]").
-                    $("[data-qa-type=uikit\\/sidebar\\.subtitle]");
+            sumField = $("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.content").
+                    $("[data-qa-type=uikit\\/sidebar\\.subtitle]"),
+            subscriptionTitle = $("[data-qa-type=uikit\\/screenTwinCols\\.withSidebar\\.form]").$("[data-field-name=subscriptions_title]");
 
     public SubscriptionProPage checkHeader() {
         mainFrame.$("h1").$("p").shouldHave(Condition.text(
@@ -30,6 +31,7 @@ public class SubscriptionProPage {
 
     public SubscriptionProPage tryForFreeButtonClick(){
         tryForFreeButton.click();
+        subscriptionTitle.scrollTo();
         return this;
     }
 
